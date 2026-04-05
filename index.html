@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HUAAN - Human Atomic Analysis | Archetípus Térkép</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@200;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #05070a;
+            --gold: #d4af37;
+            --gold-muted: rgba(212, 175, 55, 0.2);
+            --text: #e0e0e0;
+            --card-bg: rgba(255, 255, 255, 0.02);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            background: var(--bg); 
+            color: var(--text); 
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.8;
+            background-image: radial-gradient(circle at center, #10141d 0%, #05070a 100%);
+            overflow-x: hidden;
+        }
+
+        .hero {
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            border-bottom: 1px solid var(--gold-muted);
+        }
+
+        h1 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(2.5rem, 8vw, 4.5rem);
+            color: var(--gold);
+            letter-spacing: 12px;
+            margin-bottom: 10px;
+            text-shadow: 0 0 30px rgba(212, 175, 55, 0.3);
+        }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 60px 20px; }
+
+        /* Archetípus Rács */
+        .archetype-section h2 {
+            font-family: 'Cinzel', serif;
+            text-align: center;
+            color: var(--gold);
+            margin-bottom: 50px;
+            letter-spacing: 3px;
+        }
+
+        .archetype-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 25px;
+        }
+
+        .archetype-card {
+            background: var(--card-bg);
+            border: 1px solid var(--gold-muted);
+            padding: 30px;
+            text-align: center;
+            position: relative;
+            transition: all 0.5s ease;
+            cursor: default;
+        }
+
+        .archetype-card:hover {
+            border-color: var(--gold);
+            background: rgba(212, 175, 55, 0.05);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .archetype-card h3 {
+            font-family: 'Cinzel', serif;
+            color: var(--gold);
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+        }
+
+        .archetype-card p {
+            font-size: 0.85rem;
+            font-weight: 200;
+            opacity: 0.7;
+        }
+
+        /* Infó Szekciók */
+        .info-box {
+            margin: 60px 0;
+            padding: 40px;
+            border-left: 2px solid var(--gold);
+            background: rgba(255,255,255,0.01);
+        }
+
+        .info-box h2 { font-family: 'Cinzel', serif; color: var(--gold); margin-bottom: 20px; }
+
+        .contact-panel {
+            background: var(--gold-muted);
+            padding: 50px;
+            text-align: center;
+            border-radius: 5px;
+            margin-top: 80px;
+        }
+
+        .contact-details {
+            margin: 30px 0;
+            font-size: 1.1rem;
+            color: var(--gold);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 18px 45px;
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 0.9rem;
+            transition: 0.4s;
+            margin-top: 20px;
+        }
+
+        .btn:hover {
+            background: var(--gold);
+            color: #000;
+        }
+
+        footer { text-align: center; padding: 40px; opacity: 0.4; font-size: 0.75rem; letter-spacing: 1px; }
+
+        @media (max-width: 768px) {
+            .archetype-grid { grid-template-columns: 1fr 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="hero">
+        <h1>HUAAN</h1>
+        <p style="letter-spacing: 5px; text-transform: uppercase; color: var(--gold); font-weight: 600;">Human Atomic Analysis</p>
+        <p style="max-width: 600px; margin-top: 30px; font-weight: 200; font-style: italic;">
+            "A módszer, amivel saját tanácsadóddá válsz."
+        </p>
+    </section>
+
+    <div class="container">
+        
+        <section class="info-box">
+            <h2>Mire jó a HUAAN térkép?</h2>
+            <p>Segítségével válsz saját tanácsadóddá. Hogyan lehetséges ez? A módszer hátterében az a közhelyszerű igazság áll, hogy képes vagy az általad alkotott térképedre ránézve, racionálisan gondolkodni az életedről, és a megértés végül megkönnyebbülést hoz.</p>
+        </section>
+
+        <section class="archetype-section">
+            <h2>A Nyolc Archetípus</h2>
+            <div class="archetype-grid">
+                <div class="archetype-card"><h3>Gyermek</h3><p>A tiszta rácsodálkozás és a lehetőségek forrása.</p></div>
+                <div class="archetype-card"><h3>Szűz</h3><p>Az érintetlenség, az integritás és a belső tisztaság őrzője.</p></div>
+                <div class="archetype-card"><h3>Szerető</h3><p>A kapcsolódás, a szenvedély és az esztétika megélése.</p></div>
+                <div class="archetype-card"><h3>Anya-Apa</h3><p>A gondoskodás, a felelősségvállalás és a teremtő erő.</p></div>
+                <div class="archetype-card"><h3>Harcos</h3><p>A határok meghúzása, a védelem és a célirányos cselekvés.</p></div>
+                <div class="archetype-card"><h3>Hírvivő</h3><p>A kommunikáció, az összeköttetés és az információ áramlása.</p></div>
+                <div class="archetype-card"><h3>Bölcs Vénség</h3><p>A tapasztalatból fakadó tudás és a belső nyugalom.</p></div>
+                <div class="archetype-card"><h3>Változó</h3><p>A transzformáció, az elengedés és az újrakezdés ereje.</p></div>
+            </div>
+        </section>
+
+        <section class="contact-panel">
+            <h2>Elakadtál? Segítek.</h2>
+            <p>Készen állsz, hogy kezedbe vedd a HUAAN térképed, ami megmutatja a választ a kérdésedre és irányba tesz?</p>
+            
+            <div class="contact-details">
+                📧 foglalashuaan@gmail.com | 📞 +36 70 379 71 69<br>
+                Hétfő és Péntek | BMS Stúdió, Bp. Krisztina krt. 27.
+            </div>
+
+            <a href="mailto:foglalashuaan@gmail.com" class="btn">Konzultációt kérek</a>
+        </section>
+
+    </div>
+
+    <footer>
+        &copy; 2026 HUAAN - HUMAN ATOMIC ANALYSIS | FÖLDVÁRI ÉVA G. MÓDS
